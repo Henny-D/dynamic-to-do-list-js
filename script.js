@@ -20,15 +20,16 @@ const taskList=document.getElementById('task-list');//add task list to display t
             //Create a new li element and set its textContent
         const taskItem=document.createElement("li");
         taskItem.textContent=taskText;
+        taskItem.classList.add("task-item");
 
         // Create a remove button
         const removeButton=document.createElement("button");
         removeButton.textContent="Remove";
-        removeButton.className="remove-btn";
+        removeButton.classList.add("remove-btn");
 
         // Assign an onclick event to the remove button
         removeButton.onclick = ()=>{
-            taskList.removeChild(taskItem);
+        taskList.removeChild(taskItem);
         };
          // Append the remove button to the li element
         taskItem.appendChild(removeButton);
